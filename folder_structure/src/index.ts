@@ -3,61 +3,69 @@ let personAge:number = 22;
 let check:boolean = true
 
 
+let thirdPersonName: string = "manoj"
 
-// another type 
+// second stynex 
 
-let secondPersonName = <string>"raman";
+let fourthPersonName = <string> "sonu" 
 
 // union varible multiple data type
 
-let reached:string|boolean;
+let checkI :string | boolean = "lets'go"
 
-reached = true
+// let kunal: unknown = "kunal"; avoid any use unknown 
 
 
+// funtion example leter it cover it fully explained
 
-// const test = (n: number , m:number): number =>{
-//     console.log(n,m);
-//     return n*m
-// }
+const plus = (n: number , m: number): number =>{
+   return n+m
+}
+
+// const ans = plus(2,2)
+
+// console.log(ans);
 
 
 
 // type alises
 
-// type Username = string | number
+// type Test = string | number
 
-// type Username = (n:number , b:number) => number
+// const nambo : Test = 1992
 
-// const test:Username = (a,b) =>{
-//     console.log(a,b);
-//     return a*b
-// } 
+// type Username = (n:number , o:number) => number
+
+// const testingFuntion : Username = (a ,b) => {
+//    return a+b
+// }
+
+// const ans = testingFuntion(3,3)
+// console.log(ans);
 
 
-//aray 
+
+// aray 
 
 // const arr = [1,3,4,5,6]
 
 // arr
+const array: number [] = [23.,12,32,4,3];
+const array2: string [] = ["kunal","jangra"];
+const array4 = <number []>[1,2,3,4]
+const array5 = <string []>["kunal","jangra"];
+const array6: Array<number> = [12,21,32423,2];
+const array7:Array<string> = ["kunal","jangra"]
 
-// const arr: number[] = [12,31,12,];
-// const arr2: string[] = ["kunal","jangra"]
+// tuple 
 
-// const array3: Array<string> = ["kunal"] alag tarika 
-// const array: Array<string | number> = [22] both value accept 
+const array8: readonly [number,number,string] = [21,12,"kunal"]; // multiple data types store 
 
-
-// const num: number[] = [2,2,2]
-// const array: Array<string> = ["kunal","jangra"]
-// const num: [number,number,number] = [2,2,2]  tuple
-
-// array.map( data => data.length)
+// array.map( data => data.)  // data.  return  all number method 
 
 
 
 // objects 
-
 
 // long 
 

@@ -2,11 +2,75 @@
 let perosonName = "kunal";
 let personAge = 22;
 let check = true;
-// another type 
-let secondPersonName = "raman";
+let thirdPersonName = "manoj";
+// second stynex 
+let fourthPersonName = "sonu";
 // union varible multiple data type
-let reached;
-reached = true;
+let checkI = "lets'go";
+// let kunal: unknown = "kunal"; avoid any use unknown 
+// funtion example leter it cover it fully explained
+const plus = (n, m) => {
+    return n + m;
+};
+// const ans = plus(2,2)
+// console.log(ans);
+// type alises
+// type Test = string | number
+// const nambo : Test = 1992
+// type Username = (n:number , o:number) => number
+// const testingFuntion : Username = (a ,b) => {
+//    return a+b
+// }
+// const ans = testingFuntion(3,3)
+// console.log(ans);
+// -----------------------------------------
+// aray 
+// const arr = [1,3,4,5,6]
+// arry
+const array = [23., 12, 32, 4, 3];
+const array2 = ["kunal", "jangra"];
+const array4 = [1, 2, 3, 4];
+const array5 = ["kunal", "jangra"];
+const array6 = [12, 21, 32423, 2];
+const array7 = ["kunal", "jangra"];
+// tuple 
+const array8 = [21, 12, "kunal"]; // multiple data types store 
+const personObject = {
+    personName: "kunal",
+    age: 22,
+    isAvailble: true
+};
+const newPersonObj = {
+    personName: "raman",
+    age: 88,
+    location: "kharak",
+    isAvailble: true // optional becouse we use ? to make it optional 
+};
+const func = (a, b) => {
+    return a + b;
+};
+const ans = func(8, 2);
+const addFunction = (a, b, l = 10) => {
+    return a + b + l;
+};
+// const ansofFunc = addFunction(2,2)
+// console.log(ansofFunc);
+// again practise of funtions in TS
+// type Person  = (fName:string , lName:string) => string;
+const fullName = (f, n) => {
+    return f + " " + n;
+};
+const fname = fullName("kunal", "jangra");
+// console.log(fname);
+//-----------------------------------
+// rest parameter operator
+// type SpreadOp = (...data: number []) => number [] // preDefine 
+// const spread:SpreadOp = (...data) => {
+const spread = (...data) => {
+    return data;
+};
+const ansOfSpread = spread(2, 3, 4);
+console.log(ansOfSpread);
 const getData = (product) => {
     console.log(product);
 };
@@ -24,7 +88,7 @@ const product = {
 // }
 // type themeMode = "light" | "dark"
 // const mode: themeMode = "dark"
-///// clasess ------------------
+///// clasess ---------------------
 // class Player {
 //   // private cannot access direct but can access into funtion 
 //   // public by default its public 

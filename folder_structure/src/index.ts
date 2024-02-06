@@ -44,12 +44,13 @@ const plus = (n: number , m: number): number =>{
 // console.log(ans);
 
 
-
+// -----------------------------------------
 // aray 
 
 // const arr = [1,3,4,5,6]
 
-// arr
+
+// arry
 const array: number [] = [23.,12,32,4,3];
 const array2: string [] = ["kunal","jangra"];
 const array4 = <number []>[1,2,3,4]
@@ -64,110 +65,122 @@ const array8: readonly [number,number,string] = [21,12,"kunal"]; // multiple dat
 // array.map( data => data.)  // data.  return  all number method 
 
 
-
+// ---------------------------------------------
 // objects 
 
-// long 
+// making object long way 
 
-// const obj:{
-//     age: number;
-//     perosonName: string;
+// const personObject : {   // making  object 
+//   personName:string;
+//   age:number
 // } = {
-//     age :99,
-//     perosonName:"kunal"
-// }
-
-// short 
-
-// type Obj = {
-//     age: number,
-//     nambo: string,
-//     isAlive?: boolean  /// ? make them optional 
-// }
-
-// interface Obj {
-//     age: number,
-//     nambo: string,
-//     isAlive?: boolean  /// ? make them optional 
+//   personName : "kunal",
+//   age : 99
 // }
 
 
+// console.log(personObject.personName);
 
-// const ob2:Obj ={
-//     age:22,
-//     nambo:"kunal",
-//     isAlive:true
+
+
+// short  way use type and interface to describe types of our object 
+
+// type PersonObj = {
+//   personName:string;
+//   age:number;
+//   isAvailble?:boolean
 // }
 
-// const ob3:Obj ={
-//     age:12,
-//     nambo:"raman",
-   
-// }
-
-// type FuncType = (n: number , m: number) => void;
-// interface NewObje extends Obj {
-//   soler:boolean
-//   func?:FuncType
-// }
-
-// const gigi:NewObje = {
-//  nambo:"kunal",
-//  age:22,
-//  soler:true,
-//  func:(n,m)=>{
-//     console.log(n,m);
-//  }
- 
-// }
+interface PersonObj {
+  personName:string;
+  age:number;
+  isAvailble?:boolean  // ? make them optional 
+}
 
 
-// funtions in typeScript 
+const personObject:PersonObj = {
+  personName : "kunal",
+  age : 22,
+  isAvailble:true
+}
+
+
+// add some properties in object types
+
+interface NewPersonObj extends PersonObj {
+   location:string
+}
+
+const newPersonObj:NewPersonObj = {
+  personName : "raman",
+  age : 88,
+  location : "kharak",
+  isAvailble:true  // optional becouse we use ? to make it optional 
+
+}
+
+
+
+
+// console.log(personObject.personName,personObject.age);
+// console.log(newPersonObj.personName);
+
+
+
 
 
 // ------------------------------------
+// funtions in typeScript 
 
 
-// type Func = (a: number , b: number ,l?: number)=> number | string
-// optional parameter 
-// const funct:Func = (a,b,l)=> {
-//     if(typeof l === "undefined") return a*b
-//   return a*b*l
-// }
+// optional parameter l ?  
+type Func = (a: number , b: number , l?:number) => number | string
+
+const func:Func = (a , b) => {
+   return a+b
+}
+
+const ans = func(8,2)
+
+
+// default parameter 
+
+type FuncType = (a:number , b:number , l?:number) => number;
+
+const addFunction:FuncType = (a,b,l=10) => {
+   return a+b+l
+}
+
+// const ansofFunc = addFunction(2,2)
+// console.log(ansofFunc);
+
+// again practise of funtions in TS
+
+// type Person  = (fName:string , lName:string) => string;
+const fullName = (f:string,n:string): string => {
+  return f+" "+n
+} 
+
+const fname = fullName("kunal","jangra");
+// console.log(fname);
 
 
 
-// const res = funct(2,2,2)
-// console.log(res);
 
 
 
-// type Func = (a: number , b: number ,l?: number)=> number | string
-// // default parameter 
-// const funct:Func = (a,b,l = 2)=> { 
-//     // const funct = (a:number , b: number , l: number = 2 ): number => {
-   
-//   return a*b*l
-// }
+//-----------------------------------
+// rest parameter operator
 
+// type SpreadOp = (...data: number []) => number [] // preDefine 
+// const spread:SpreadOp = (...data) => {
+const spread = (...data: number[]): number[] => {
+  return data
+}
 
+const ansOfSpread = spread(2,3,4)
+console.log(ansOfSpread);
 
-// const res = funct(2,2)
-// console.log(res);
-
-
-
-// rest operator
-
-// type FuncType = (...a: number []) => number []
-
-
-// // const funct = (...a: number []) => { 
-// const funct:FuncType = (...a) => {
-//   return a
-// }
-
-// funct(1,1,1,1)
 
 
 
@@ -233,7 +246,7 @@ const product: Product = {
 
 
 
-///// clasess ------------------
+///// clasess ---------------------
 
 // class Player {
 //   // private cannot access direct but can access into funtion 

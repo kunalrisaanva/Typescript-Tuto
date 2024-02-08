@@ -184,19 +184,6 @@ console.log(ansOfSpread);
 
 
 
-// funtion 
-
-// type FuncType = (...a: number []) => number
-
-// // function lol (n: number):number{
-//     // return n
-// // }
-
-// const lol:FuncType  = function data(a){
-//   return a
-// }
-
-
 // function with object
 
 
@@ -388,5 +375,18 @@ form.onsubmit = (e: SubmitEvent) => {
 // console.log(ans.name);
 
 
+// const func2 = (n: number): number => {
+//   return n
+// }
 
- 
+// const ans2 = func2(2);
+// console.log(ans2);
+
+
+// const getData2 = (key:number):number => {
+//   return key
+// }
+
+// const ans3 = getData(3);
+
+

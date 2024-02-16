@@ -180,3 +180,32 @@ form.onsubmit = (e) => {
 // }
 // const ans = func<Person>(person1);
 // console.log(ans.name);
+// const func2 = (n: number): number => {
+//   return n
+// }
+// const ans2 = func2(2);
+// console.log(ans2);
+// const getData2 = (key:number):number => {
+//   return key
+// }
+// const ans3 = getData(3);
+// const printLog = <T>(value: T):T => {
+//   console.log(value);
+//   return value
+// }
+// const a = printLog(2)
+// const b = printLog("2")
+// type Person = {
+//   name:string;
+//   age:number
+// }
+// const perons1 : Person = {
+//   name:"kunla",
+//   age:22
+// }
+// const printLog = <T>(value: T):T => {
+//   console.log(value);
+//   return value
+// }
+// const a = printLog<Person>(perons1)
+// const b = printLog("2")
